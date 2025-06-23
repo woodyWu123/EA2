@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #777;
+    padding: 20px;
+    text-align: center;
+    height: 100px; /* Set a fixed height for the header */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+    height: 100%;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 30%;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.swapColor {
+    background-color: black; /* Change to black */
+    color: white; /* Change text to white */
+}
+
+/* Optional: Add hover effect for better visibility */
+.box:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.swapButton {
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 20px; /* Space above the button */
+    width: 30%;/* Ensure it takes full width for proper alignment */
+}
