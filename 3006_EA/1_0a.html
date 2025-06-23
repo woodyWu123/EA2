@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片從左到右旋轉</title>
+    <style>
+        .rotate {
+            width: 300px; /* 設定圖片寬度 */
+            animation: rotate 1s infinite; /* 動畫設定 */
+            display: block; /* 確保圖片為塊級元素 */
+            margin: auto; /* 讓圖片居中 */
+            transform-origin: center; /* 設定旋轉中心為圖片中心 */
+        }
+
+        @keyframes rotate {
+            0% { transform: rotateY(0deg) translateX(0px); }
+            25% { transform: translateY(4px); }
+            50% { transform: rotateY(180deg)translateY(0px); }
+            75% { transform: translateY(-4px); }
+            100% { transform: rotateY(0deg) translateX(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="dummy_tanks_7.jpg" alt="從左到右旋轉圖片" class="rotate">
+
+</body>
+</html>
