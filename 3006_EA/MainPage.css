@@ -15,7 +15,12 @@ body {
     width: 35%;
     height: 100%;
 }
-
+.containertxt {
+    display: flex;
+    justify-content: space-around;/*https://www.w3schools.com/cssref/playdemo.php?filename=playcss_justify-content*/
+    width: 100%;
+    height: 100%;
+}
 .box {
     display: inline-block; /* Allows the box to respond to the hover */
     padding: 20px; /* Add some padding for visual appeal */

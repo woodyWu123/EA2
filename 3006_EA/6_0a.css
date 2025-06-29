@@ -1,0 +1,49 @@
+        .menu ul {
+            list-style: none; 
+            margin: 0;
+            padding: 0;  
+            border-radius: 10px;
+            display: inline-block;
+            position: relative; /* 使子菜單正確定位 */
+        }
+        .menu a {
+            text-decoration: none;
+            padding: 10px 20px;
+            line-height: 1.5em;
+            color: white;
+            display: block;
+        }
+        .menu a:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+        .menu .sub {
+            display: none; /* 初始隱藏子菜單 */
+            position: absolute;
+            top: 0; /* 將子菜單與主菜單對齊 */
+            left: 100%; /* 將子菜單放置在主項目右側 */
+            width: 100%;
+            background-color: darkblue;
+            box-shadow: 10px 10px 5px green;
+            border-radius: 5px;
+        }
+        .menu ul li:hover .sub {
+            display: block; /* 懸停時顯示子菜單 */
+        }
+        .menu .sub li {
+            height: auto; /* 自動高度 */
+        }
+        .img{
+            max-width: 250px;
+            max-height: 300px;
+        }
+        .img:hover{
+            animation: img 0.6s ease-in-out; /* Run the keyframes on hover */
+        }
+        @keyframes img { 
+    0% { transform: rotateY(0deg) translateX(0px); }
+    25% { transform: translateY(4px); }
+    50% { transform: rotateY(180deg) translateY(0px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: rotateY(0deg) translateX(0px); }
+}
