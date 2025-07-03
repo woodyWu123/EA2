@@ -27,6 +27,7 @@
             border-radius: 5px;
             z-index: 1000; /* 設置 z-index 以確保子菜單在最上層 */
         }
+        
         .menu ul li:hover .sub {
             display: block; /* 懸停時顯示子菜單 */
         }
