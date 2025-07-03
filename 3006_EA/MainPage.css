@@ -42,10 +42,14 @@ body {
 }
 
 .footer {
-    margin-top: 20px;
-    text-align: center;
-    
+    order:2;
+    height: auto;  
+    flex-grow: 2; /* 使其成為 Flexbox 容器 */
+    -webkit-column-count: 2;
+    padding: 20px;
+    font-size: 30px;
 }
+
 
 /* Optional: Add hover effect for better visibility */
 .box:hover {
