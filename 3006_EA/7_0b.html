@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px; /* 內邊距 */
+        }
+        .menu ul {
+            list-style: none; 
+            margin: 15px; /* 增加外邊距 */
+            padding: 0;  
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 30px); /* 每行三張圖片，考慮邊距 */
+            position: relative;
+        }
+        .menu a {
+            text-decoration: none;
+            padding: 10px 20px;
+            line-height: 1.5em;
+            color: black;
+            display: block;
+        }
+        .menu a:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+        .img {
+            max-width: 100%; /* 使圖片適應容器 */
+            height: auto;
+            border-radius: 10px;
+        }
+        .menu .sub {           
+            display: none; /* 初始隱藏子菜單 */
+            position: absolute;
+            top: 100%; /* 將子菜單放置在項目下方 */
+            left: 50%; /* 將子菜單居中 */
+            transform: translateX(-50%); /* 使子菜單居中 */
+            width: 200px; /* 設定子菜單的寬度 */
+            background-color: darkblue;
+            box-shadow: 10px 10px 5px green;
+            border-radius: 5px;
+            z-index: 10; /* 確保子菜單在其他元素上方 */
+        }
+        .menu ul:hover .sub {
+            display: block; /* 懸停時顯示子菜單 */
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 900px) {
+            .menu ul {
+                flex: 1 1 calc(50% - 30px); 
+            }
+        }
+        @media (max-width: 600px) {
+            .menu ul {
+                flex: 1 1 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <img class="img" src="MosterIcon/Monster/Flying Wyverns/MHWilds-Rathian_Icon.webp" alt="Rathian">
+                <h2>飛行Wyverns</h2>
+                <ul class="sub">
+                    <li><h1>一些文字</h1></li>
+                    <li><a href="#">參考...</a></li>
+                    <li><a href="#">問題?</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img class="img" src="MosterIcon/Monster/Flying Wyverns/MHWilds-Rathalos_Icon.webp" alt="Rathalos">
+                <h2>飛行Wyverns</h2>
+                <ul class="sub">
+                    <li><h1>一些文字</h1></li>
+                    <li><a href="#">參考...</a></li>
+                    <li><a href="#">問題?</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img class="img" src="MosterIcon/Monster/Flying Wyverns/MHWilds-Gravios_Icon.webp" alt="Gravios">
+                <h2>飛行Wyverns</h2>
+                <ul class="sub">
+                    <li><h1>一些文字</h1></li>
+                    <li><a href="#">參考...</a></li>
+                    <li><a href="#">問題?</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- 繼續添加更多 <ul> 區塊以顯示其他圖片 -->
+    </div>
+</body>
+</html>

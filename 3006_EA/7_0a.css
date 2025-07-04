@@ -1,45 +1,67 @@
-.menu ul {
-    list-style: none; 
-    margin: 0;
-    padding: 0;  
-    border-radius: 10px;
-    display: inline-block;
-    position: relative; /* 使子菜單正確定位 */
-}
-.menu a {
-    text-decoration: none;
-    padding: 10px 20px;
-    line-height: 1.5em;
-    color: white;
-    display: block;
-}
-.menu a:hover {
-    background-color: lightgreen;
-    color: black;
-}
-.menu .sub {
-    display: none; /* 初始隱藏子菜單 */
-    position: absolute;
-    top: 0; /* 將子菜單與主菜單對齊 */
-    left: 100%; /* 將子菜單放置在主項目右側 */
-    width: 100%;
-    background-color: darkblue;
-    box-shadow: 10px 10px 5px green;
-    border-radius: 5px;
-}
-.menu ul li:hover .sub {
-    display: block; /* 懸停時顯示子菜單 */
-}
-.menu .sub li {
-    height: auto; /* 自動高度 */
-}
-.img{
-    max-width: 250px;
-    max-height: 300px;
-}
-.img:hover{
-    animation: img 0.6s ease-in-out; /* Run the keyframes on hover */
-}
+.menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;/* 內邊距 */
+            max-width: 80%;
+        }
+        .menu ul {
+            list-style: none; 
+            margin: 15px; /* 增加外邊距 */
+            padding: 0;  
+            border-radius: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 30px);/* 每行三張圖片，考慮邊距 */
+            position: relative;
+        }
+        .menu a {
+            text-decoration: none;
+            padding: 10px 20px;
+            line-height: 1.5em;
+            color: black;
+            display: block;
+        }
+        .menu a:hover {
+            background-color: lightgreen;
+            color: black;
+        }
+        .img {
+            max-width: 250px;
+            max-width: 100%; 
+            height: auto;
+            border-radius: 10px;
+        }
+        .menu .sub {           
+            display: none; /* 初始隱藏子菜單 */
+            position: absolute;
+            top: 0%; /* 將子菜單放置在項目下方 */
+            left: 100%; /* 將子菜單居中 */
+            transform: translateX(-50%); /* 使子菜單居中 */
+            width: 200px; /* 設定子菜單的寬度 */
+            background-color: darkblue;
+            box-shadow: 10px 10px 5px green;
+            border-radius: 5px;
+            z-index: 10; /* 確保子菜單在其他元素上方 */
+        }
+        .menu ul:hover .sub {
+            display: block; /* 懸停時顯示子菜單 */
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 900px) {
+            .menu ul {
+                flex: 1 1 calc(50% - 30px); 
+            }
+        }
+        @media (max-width: 600px) {
+            .menu ul {
+                flex: 1 1 100%; 
+            }
+        }
 @keyframes img { 
 0% { transform: rotateY(0deg) translateX(0px); }
 25% { transform: translateY(4px); }
