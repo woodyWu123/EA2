@@ -6,8 +6,10 @@ body {
 }
 
 .header {
-    background-color: rgba(71, 71, 71, 0.286); /* Background color for the header */
-    padding: 15px 0; /* Padding for the header */
+    background-color: #777;
+    padding: 20px;
+    text-align: center;
+    height: 100px; /* Set a fixed height for the header */
 }
 
 .container {
@@ -29,16 +31,12 @@ body {
 }
 
 .box {
-    display: inline-block; /* Allows the box to respond to the hover */
-    padding: 20px; /* Add some padding for visual appeal */
-    margin: 0 10px; /* Space between boxes */
-    background-color: #f0f0f0; /* Base background color */
-    text-decoration: none; /* Remove underline from links */
-    color: #000; /* Text color */
-    transition: background-color 0.3s; /* Smooth background transition */
-    border-radius: 5px; /* Rounded corners */
-    height: 30%;
+    background-color: yellowgreen;
+    padding: 20px;
+    border: 1px solid #000000;
     width: 30%;
+    text-align: center;
+    margin-left: 5%;
 }
 
 .footer {
