@@ -1,0 +1,12 @@
+        .image-text-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 20px auto; /* Center the container */
+            max-width: 80%; /* Set a max width 1200px */
+            width: 100%; /* Allow it to be responsive */
+        }
+        .image-text-container img {
+            max-width: 200px;
+            margin-right: 10px;
+        }

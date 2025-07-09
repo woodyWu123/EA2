@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="Join Us.css">
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+<body>
+    <header class="header"><!--set as a menu no move if needed-->
+        <div class="container">
+            <img src="MosterIcon/MHWilds-Logo.png">
+            <a class="box" href="MainPage.html" >Home</a>
+            <a class="box" href="Classification_page.html">Classification</a>
+            <a class="box" href="Map.html" >Map</a>
+            <a class="box" href="Join Us.html" >Join Us</a>
+            <a class="box" href="https://www.monsterhunter.com/wilds/zh-hant/">Palace website</a>
+        </header>
+
+    <div class="container">
+        <form class="form">
+            <div class="form-group">
+                <label for="name"><span class="text-bg">Name</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age"><span class="text-bg">Age</span></label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="website"><span class="text-bg">Website Address</span></label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div class="form-group">
+                <label for="hunter-rank"><span class="text-bg">Now Hunter Rank</span></label>
+                <input type="number" id="hunter-rank" name="hunter-rank">
+            </div>
+            <div class="form-group">
+                <label for="color"><span class="text-bg">Favorite color in color code</span></label>
+                <input type="text" id="color" name="color">
+            </div>
+            <div class="form-group">
+                <label><span class="text-bg">Gender</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="monster-type"><span class="text-bg">Favorite Monster Type</span></label>
+                <select id="monster-type" name="monster-type" required>
+                    <option value="">Please select one type</option>
+                    <option value="Amphibians">Amphibians</option>
+                    <option value="Bird Wyverns">Bird Wyverns</option>
+                    <option value="Brute Wyvern">Brute Wyvern</option>
+                    <option value="Fanged Beasts">Fanged Beasts</option>
+                    <option value="Constructs">Constructs</option>
+                    <option value="Flying Wyverns">Flying Wyverns</option>
+                    <option value="Leviathans">Leviathans</option>
+                    <option value="Temnocerans">Temnocerans</option>
+                    <option value="Cephalopods">Cephalopods</option>
+                    <option value="Gore_Magala">Gore_Magala</option>
+                </select>
+                  <input type="submit" >
+                  <input type="reset">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
