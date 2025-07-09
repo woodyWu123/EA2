@@ -9,3 +9,12 @@
     max-width: 50%;
     max-height: 50%;
 }
+.box {
+        position: absolute;
+    background-color: yellowgreen;
+    top: 35%;
+    left: 44%;
+    max-width: 20%;
+    max-height: 20%;
+    z-index: 10; /* 確保子菜單在其他元素上方 */
+}
