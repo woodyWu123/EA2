@@ -53,11 +53,11 @@ body {
 }
 
 @keyframes box {
-    0% { transform: rotateY(0deg) translateX(0px); }
-    25% { transform: translateY(4px); }
-    50% { transform: rotateY(180deg)translateY(0px); }
+    0% { transform: translateX(0px); }
+    25% { transform: translateY(2px); }
+    50% { transform:translateY(0px); }
     75% { transform: translateY(-4px); }
-    100% { transform: rotateY(0deg) translateX(0px); }
+    100% { transform: translateX(0px); }
 }
 
 .footer {
@@ -70,6 +70,8 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 600px) {
+
+
     .container {
         flex-direction: column;
         gap: 10px;
