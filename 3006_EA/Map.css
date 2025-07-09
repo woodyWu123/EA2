@@ -1,9 +1,65 @@
-.introduce{
-    order:2;
-    height: auto;  
-    flex-grow: 2; /* 使其成為 Flexbox 容器 */
-    padding: 20px;
+.main {
+    background-color: rgba(200, 200, 200, 0.5); /* 淺灰色半透明背景框 */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* 文字和圖片垂直排列 */
+    align-items: center; /* 內容水平居中 */
+    padding: 15px;
+    max-width: 80%; /* 限制寬度 */
     font-size: 30px;
-    text-align: left;
-    max-width: 50%;
+}
+
+.text-bg {
+    background-color: rgba(200, 200, 200, 0.5); /* 與 .main 相同的背景框 */
+    color: black; /* 從 .a 整合 */
+    font-size: 60px; /* 從 30px 增加一倍 */
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block; /* 適應文字寬度 */
+    margin-bottom: 10px; /* 與圖片分隔 */
+}
+
+.map-img {
+    max-width: 200px; /* 與 Classification_page.css 的 .img 一致 */
+    max-height: 150px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.map-img:hover {
+    animation: img 0.6s ease-in-out; /* 與 Classification_page.css 的動畫一致 */
+}
+
+@keyframes img {
+    0% { transform: rotateY(0deg) translateX(0px); }
+    25% { transform: translateY(4px); }
+    50% { transform: rotateY(180deg) translateY(0px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: rotateY(0deg) translateX(0px); }
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box {
+        width: 80%;
+    }
+
+    .main {
+        max-width: 90%; /* 小螢幕下略微放寬 */
+    }
+
+    .text-bg {
+        font-size: 48px; /* 從 24px 增加一倍 */
+        padding: 8px; /* 略減內邊距 */
+    }
+
+    .map-img {
+        max-width: 150px; /* 與 Classification_page.css 的響應式 .img 一致 */
+        max-height: 100px;
+    }
 }

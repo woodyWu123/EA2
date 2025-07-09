@@ -1,6 +1,19 @@
-.from{
-    margin-top: 30px;
-    text-align: left;
-    background-color:aqua;
+.form {
+    background-color:rgb(169,169,169, 0.85); /* 淺灰色半透明背景框，與 Map.css 的 .main 一致 */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%; /* 限制寬度 */
+    position: absolute; /* 置於畫面正中間 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 表單項之間的間距 */
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 左對齊 */
+}

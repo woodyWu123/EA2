@@ -1,137 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-  function print_result() {
-    /* --- (f) --- */
-    var name=document.f1.name.value
-    alert("Name is"+name)
-    var age=document.f1.age.value
-    alert("Age is"+age)
-
-    var url=document.f1.url.value
-    alert("Url is"+url)
-
-    var time=document.f1.time.value
-    alert("Rank is"+time)
-    var color=document.f1.color.value
-    alert("Color is"+color)
-    
-    var gender=document.f1.gender.value
-    if(document.f1.gender[0].checked)
-      gender=document.f1.gender[0].value
-    else
-      gender=document.f1.gender[1].value
-    alert("Your Gender is"+gender)
-
-
-
-
-    var index=document.f1.sport.selectedIndex
-    var sport_text=document.f1.sport.options[index].text
-    alert("Sport is"+sport_text)
-
- 
-  }
-  
-</script>
-<title>Join Us</title>
-<link rel="stylesheet" href="MainPage.css">
-<link rel="stylesheet" href="Join Us.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="Join Us.css">
+    <link rel="stylesheet" href="MainPage.css">
 </head>
-
-
 <body>
+    <header class="header"><!--set as a menu no move if needed-->
+        <div class="container">
+            <img src="MosterIcon/MHWilds-Logo.png">
+            <a class="box" href="MainPage.html" >Home</a>
+            <a class="box" href="Classification_page.html">Classification</a>
+            <a class="box" href="Map.html" >Map</a>
+            <a class="box" href="Join Us.html" >Join Us</a>
+            <a class="box" href="https://www.monsterhunter.com/wilds/zh-hant/">Palace website</a>
+        </header>
 
-  <div class="header"><!--set as a menu no move if needed-->
-  <nav class="container" role="navigation">
-        <img src="MosterIcon/MHWilds-Logo.png">
-        <a class="box" href="MainPage.html">Home</a>
-        <a class="box" href="Classification_page.html">Classification</a>
-        <a class="box" href="Map.html">Map</a>
-        <a class="box" href="Join Us.html">Join Us</a>
-  </div>
-
-  <form name="f1" onSubmit="print_result()" class="from">
-    <table>
-      <tr>
-        <td>Name</td>
-        <td>
-          <input type="text" name="name" pattern="^[A-Z][a-z]*"
-                 title="Capital first character" />
-        </td>
-      </tr>
-
-      <tr>
-        <td>Age</td>
-        <td>
-
-          <input type="number" name="age" min="16" max="80" required="required"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Website Address</td>
-        <td>
-
-          <input type="url" name="url" title="http://domainName" required="required"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Now Hunter Rank</td>
-        <td>
-
-          <input type="text" title="HH:MM:SS" name="time" required="required"
-                 pattern="(01?/D| 2[0-3] : (0-5)?/D : (0-5)?/D )" />
-               
-        </td>
-      </tr>
-
-      <tr>
-        <td>Favorite color in color code</td>
-        <td>
-
-          <input type="text" title="#hhh or #hhhhhh" name="color" required="required"
-                 pattern="^#([0-9 a-f A-F](3) | [0-9 a-f A-F](6) )" />
-
-        </td>
-      </tr>
-
-      <tr>
-        <td>Gender</td>
-        <td>
-          <input type="radio" name="gender" value="M" required="required" />Male
-          <input type="radio" name="gender" value="F" />Female
-        </td>  
-      </tr>
-
-  
-
-      <tr>
-        <td>Favorite Monster Type</td>
-        <td>
-          <select name="Type">
-            <option value="">Please select one type</option>
-            <option value="Amp">Amphibians</option>
-            <option value="BiW">Bird Wyverns</option>
-            <option value="BrW">Brute Wyvern</option>
-            <option value="FaB">Fanged Beasts</option>
-            <option value="Con">Constructs</option>
-            <option value="FlW">Flying Wyverns</option>
-            <option value="Lev">Leviathans</option>
-            <option value="Tem">Temnocerans</option>
-            <option value="Cep">Cephalopods</option>
-            <option value="Non">Gore_Magala</option>
-          </select>
-        </td>  
-      </tr>
-    </table>
-    <br />
-
-    <input type="submit" value="Submit" />
-    <input type="reset" value=" reset ">
-  </form>
+    <div class="container">
+        <form class="form">
+            <div class="form-group">
+                <label for="name"><span class="text-bg">Name</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age"><span class="text-bg">Age</span></label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="website"><span class="text-bg">Website Address</span></label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div class="form-group">
+                <label for="hunter-rank"><span class="text-bg">Now Hunter Rank</span></label>
+                <input type="number" id="hunter-rank" name="hunter-rank">
+            </div>
+            <div class="form-group">
+                <label for="color"><span class="text-bg">Favorite color in color code</span></label>
+                <input type="text" id="color" name="color">
+            </div>
+            <div class="form-group">
+                <label><span class="text-bg">Gender</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="monster-type"><span class="text-bg">Favorite Monster Type</span></label>
+                <select id="monster-type" name="monster-type" required>
+                    <option value="">Please select one type</option>
+                    <option value="Amphibians">Amphibians</option>
+                    <option value="Bird Wyverns">Bird Wyverns</option>
+                    <option value="Brute Wyvern">Brute Wyvern</option>
+                    <option value="Fanged Beasts">Fanged Beasts</option>
+                    <option value="Constructs">Constructs</option>
+                    <option value="Flying Wyverns">Flying Wyverns</option>
+                    <option value="Leviathans">Leviathans</option>
+                    <option value="Temnocerans">Temnocerans</option>
+                    <option value="Cephalopods">Cephalopods</option>
+                    <option value="Gore_Magala">Gore_Magala</option>
+                </select>
+                  <input type="submit" >
+                  <input type="reset">
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
