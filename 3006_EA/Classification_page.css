@@ -1,51 +1,109 @@
-        .menu ul {
-            list-style: none; 
-            margin: 0;
-            padding: 0;  
-            border-radius: 10px;
-            display: inline-block;
-            position: relative; /* 使子菜單正確定位 */
-        }
-        .menu a {
-            text-decoration: none;
-            padding: 10px 20px;
-            line-height: 1.5em;
-            color: white;
-            display: block;
-        }
-        .menu a:hover {
-            background-color: lightgreen;
-            color: black;
-        }
-        .menu .sub {
-            display: none; /* 初始隱藏子菜單 */
-            position: absolute;
-            top: 100%; /* 將子菜單放置在主項目下方 */
-            width: 100%;
-            background-color: darkblue;
-            box-shadow: 10px 10px 5px green;
-            border-radius: 5px;
-            z-index: 1000; /* 設置 z-index 以確保子菜單在最上層 */
-        }
-        
-        .menu ul li:hover .sub {
-            display: block; /* 懸停時顯示子菜單 */
-        }
-        .menu .sub li {
-            height: auto; /* 自動高度 */
-        }
-        .img{
-            max-width: 250px;
-            max-height: 300px;
-        }
-        .img:hover{
-            animation: img 0.6s ease-in-out; /* Run the keyframes on hover */
-        }
-        
-        @keyframes img { /*旋轉和位移效果*/
-        0% { transform: rotateY(0deg) translateX(0px); }
-        25% { transform: translateY(4px); }
-        50% { transform: rotateY(180deg) translateY(0px); }
-        75% { transform: translateY(-4px); }
-        100% { transform: rotateY(0deg) translateX(0px); }
-        }/*end*/
+/* 下拉菜單樣式 */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行三欄，橫向排列 */
+    gap: 20px; /* 欄之間間距 */
+    max-width: 1200px; /* 限制最大寬度，與 MainPage.css 一致 */
+    margin: 20px auto; /* 居中 */
+    padding: 0 20px; /* 左右內邊距 */
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+    background-color: #333; /* 添加背景色以提高可讀性 */
+    min-width: 200px; /* 確保子菜單對齊 */
+    color:white;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: 1.5em;
+    color: white;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: yellowgreen; /* 統一與 MainPage.css 的 .box 顏色 */
+    color: black;
+}
+
+.menu .sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px; /* 固定寬度以避免過寬 */
+    background-color: darkblue;
+    box-shadow: 5px 5px 5px rgba(0, 128, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu ul li:hover .sub {
+    display: block;
+}
+
+.menu .sub li {
+    height: auto;
+    border-bottom: 1px solid #555; /* 添加分隔線 */
+}
+
+.menu .sub li:last-child {
+    border-bottom: none; /* 最後一項無分隔線 */
+}
+
+/* 圖片樣式 */
+.img {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.img:hover {
+    animation: img 0.6s ease-in-out;
+}
+
+.Hint{
+    margin-top: auto;
+    font-size: 30px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+@keyframes img {
+    0% { transform: rotateY(0deg) translateX(0px); }
+    25% { transform: translateY(4px); }
+    50% { transform: rotateY(180deg)translateY(0px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: rotateY(0deg) translateX(0px); }
+}
+
+/* 響應式設計 */
+@media (max-width: 1280px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr); /* 平板顯示兩欄 */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: 1fr; /* 小屏幕單列 */
+    }
+    .menu ul {
+        width: 100%;
+    }
+    .menu .sub {
+        width: 100%;
+        position: static;
+    }
+    .img {
+        max-width: 150px;
+        max-height: 100px;
+    }
+}

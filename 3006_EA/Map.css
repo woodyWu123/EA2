@@ -1,0 +1,9 @@
+.introduce{
+    order:2;
+    height: auto;  
+    flex-grow: 2; /* 使其成為 Flexbox 容器 */
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    max-width: 50%;
+}
