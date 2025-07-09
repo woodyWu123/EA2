@@ -5,7 +5,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
     background: url("MosterIcon/thumb_main.jpg") no-repeat center/cover;
+=======
+    background: url("MosterIcon/thumb_main.png") no-repeat center/cover;
+>>>>>>> Stashed changes
 }
 
 .header {
