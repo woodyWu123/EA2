@@ -1,78 +1,23 @@
-
-
-.main{
+.main {
     background-color: rgba(200, 200, 200, 0.5); /* 淺灰色半透明背景框 */
     border-radius: 10px;
     display: flex;
-
     flex-direction: column; /* 文字和圖片垂直排列 */
     align-items: center; /* 內容水平居中 */
     padding: 15px;
     max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
+    font-size: 30px;
 }
 
-.WP{
-    background-color: rgba(212, 223, 61, 0.79); /* 淺灰色半透明背景框 */
+.text-bg {
+    background-color: rgba(200, 200, 200, 0.5); /* 與 .main 相同的背景框 */
+    color: black; /* 從 .a 整合 */
+    font-size: 60px; /* 從 30px 增加一倍 */
     border-radius: 10px;
-    display: flex;
-
-    flex-direction: column; /* 文字和圖片垂直排列 */
-    align-items: center; /* 內容水平居中 */
-    padding: 15px;
-    max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
+    padding: 10px;
+    display: inline-block; /* 適應文字寬度 */
+    margin-bottom: 10px; /* 與圖片分隔 */
 }
-
-.SF{
-    background-color: rgba(17, 236, 28, 0.79); /* 淺灰色半透明背景框 */
-    border-radius: 10px;
-    display: flex;
-
-    flex-direction: column; /* 文字和圖片垂直排列 */
-    align-items: center; /* 內容水平居中 */
-    padding: 15px;
-    max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
-}
-
-.OB{
-    background-color: rgba(223, 20, 20, 0.79); /* 淺灰色半透明背景框 */
-    border-radius: 10px;
-    display: flex;
-
-    flex-direction: column; /* 文字和圖片垂直排列 */
-    align-items: center; /* 內容水平居中 */
-    padding: 15px;
-    max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
-}
-
-.IC{
-    background-color: rgba(17, 126, 228, 0.79); /* 淺灰色半透明背景框 */
-    border-radius: 10px;
-    display: flex;
-
-    flex-direction: column; /* 文字和圖片垂直排列 */
-    align-items: center; /* 內容水平居中 */
-    padding: 15px;
-    max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
-}
-
-.RW{
-    background-color: rgba(200, 200, 200, 0.5); /* 淺灰色半透明背景框 */
-    border-radius: 10px;
-    display: flex;
-
-    flex-direction: column; /* 文字和圖片垂直排列 */
-    align-items: center; /* 內容水平居中 */
-    padding: 15px;
-    max-width: 80%; /* 限制寬度 */
-    font-size: 40px;
-}
-
-
 
 .map-img {
     max-width: 200px; /* 與 Classification_page.css 的 .img 一致 */

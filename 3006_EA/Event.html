@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="Event.css">
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container" role="navigation">
+            <img src="MosterIcon/MHWilds-Logo.png">
+            <a class="box" href="MainPage.html">Home</a>
+            <a class="box" href="Classification_page.html">Classification</a>
+            <a class="box" href="Map.html">Map</a>
+            <a class="box" href="Join Us.html">Join Us</a>
+            <a class="box" href="Event.html">Event</a>
+            <a class="box" href="https://www.monsterhunter.com/wilds/zh-hant/">Palace website about wilds</a>
+        </nav>
+    </header>
+
+        <section class="content">
+            <h2>UPast events</h2>
+            <div class="event">
+                <h3>Time Trial</h3>
+                <p>Date: April 30, 2025 | Time: 12:00 NN | Online</p>
+                <p>About Arch-Tempered Rey_Dau Mission 8 star</p>
+                <p>Restricted weapons: Great Sword, Long Sword, Hammer, Switch Axe</p>
+                <img src="MosterIcon/Tempered/MHWilds-Arch_Tempered_Rey_Dau_Icon.webp">
+            </div>
+
+            <h2>Ongoing Events</h2>
+            <div class="event">
+                <h3>Time Trial</h3>
+                <p>Date: June 16, 2025 | Time: 13:00 NN | Online</p>
+                <p>About Tempered Arkveld Mission 8 star</p>
+                <p>Restricted weapons: Great Sword, Insect Glaive, Hammer, Charge Blade, Light Bowgun</p>
+                <img src="MosterIcon/Tempered/MHWilds-Tempered_Arkveld_Icon.webp">
+            </div></h2>
+
+            <div class="event">
+                <h3>Time Trial</h3>
+                <p>Date: June 30, 2025 | Time: 14:00 NN | Online</p>
+                <p>About Tempered Gore_Magala Mission 8 star</p>
+                <p>Restricted weapons: Great Sword, Long Sword, Hammer, Switch Axe</p>
+                <img src="MosterIcon/Tempered/MHWilds-Tempered_Gore_Magala_Icon.webp">
+            </div>
+
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>ime Trial</h3>
+                <p>Date: July 30, 2025 | Time: 4:00 PM |</p>
+                <p>About Arch-Tempered Uth_Duna Mission 8 star</p>
+                <p>Restricted weapons: Great Sword, Sword and Shield, Lance, Gunlance</p>
+                <img src="MosterIcon/Tempered/MHWilds-Arch_Tempered_Uth_Duna_Icon.webp">
+            </div>
+        </section>
+    
+        <section class="form-section">
+            <h2>Register for an Event</h2>
+            <form id="event-form" onsubmit="handleFormSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required minlength="2">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="event">Select Event:</label>
+                <select id="event" required>
+                    <option value="">Choose an event</option>
+                    <option value="tournament">Tarkov Tournament</option>
+                    <option value="workshop">Strategy Workshop</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+
+</body>
+</html>

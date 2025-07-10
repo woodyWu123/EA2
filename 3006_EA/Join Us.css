@@ -1,5 +1,5 @@
 .form {
-    background-color:rgb(169,169,169, 0.85); /* 淺灰色半透明背景框，與 Map.css 的 .main 一致 */
+    background-color: rgba(200, 200, 200, 0.9); /* 淺灰色半透明背景框，與 Map.css 的 .main 一致 */
     border-radius: 10px;
     padding: 20px;
     max-width: 80%; /* 限制寬度 */
